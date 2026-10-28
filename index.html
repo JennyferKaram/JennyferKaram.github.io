@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jennifer Karam | Building Physics &amp; Indoor Air Quality</title>
+<meta name="description" content="Dr. Jennifer Karam, postdoctoral researcher at the Chair of Building Physics, Bauhaus-Universität Weimar. Research on indoor air quality, ventilation, infection control and thermal comfort.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231f5f5b'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle'%3EJK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+<style>
+  :root {
+    --bg: #fbfaf7; --surface: #ffffff; --ink: #1c1d21; --muted: #5d6068;
+    --line: #e6e3dc; --accent: #1f5f5b; --accent-soft: #e7f0ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121416; --surface: #1a1d20; --ink: #e8e6e1; --muted: #a2a5ab;
+      --line: #2b2f33; --accent: #7cc4bc; --accent-soft: #1d2b2a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 Inter, system-ui, sans-serif; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1, h2, h3 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; line-height: 1.25; }
+
+  /* top nav */
+  nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 60px; }
+  nav .brand { font-family: "Source Serif 4", serif; font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+  nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; font-size: .92rem; }
+  nav ul a { color: var(--muted); }
+  nav ul a:hover { color: var(--ink); text-decoration: none; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .layout { display: grid; grid-template-columns: 280px 1fr; gap: 56px; padding: 48px 0 80px; }
+  main { min-width: 0; }
+
+  /* sidebar profile */
+  aside { position: sticky; top: 92px; align-self: start; }
+  .photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; object-position: center 25%;
+    border: 1px solid var(--line); display: block; }
+  .initials { width: 180px; height: 180px; border-radius: 50%; background: var(--accent-soft); color: var(--accent);
+    display: none; place-items: center; font: 600 3rem "Source Serif 4", serif; }
+  aside h1 { font-size: 1.75rem; margin: 20px 0 4px; }
+  .role { color: var(--muted); margin: 0 0 16px; font-size: .95rem; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; }
+  .links a { display: inline-flex; align-items: center; gap: 6px; padding: 6px 11px; border: 1px solid var(--line);
+    border-radius: 999px; font-size: .85rem; color: var(--ink); background: var(--surface); }
+  .links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+  .contact { font-size: .9rem; color: var(--muted); }
+  .contact div { display: flex; gap: 10px; margin-bottom: 6px; }
+  .contact i { width: 16px; margin-top: 5px; color: var(--accent); }
+
+  /* sections */
+  section { padding-top: 8px; margin-bottom: 56px; scroll-margin-top: 80px; }
+  section > h2 { font-size: 1.5rem; margin: 0 0 18px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+  .lead { font-size: 1.08rem; }
+
+  .interests { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+  .card h3 { font-size: 1.05rem; margin: 0 0 6px; }
+  .card p { margin: 0; color: var(--muted); font-size: .92rem; }
+
+  /* featured project */
+  .project { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .project img { width: 100%; display: block; background: #fff; border-bottom: 1px solid var(--line); }
+  .project .body { padding: 20px 22px 22px; }
+  .project .kicker { font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+  .project h3 { font-size: 1.25rem; margin: 6px 0 10px; }
+  .project p { margin: 0 0 10px; }
+  .project .meta { color: var(--muted); font-size: .88rem; margin: 0; }
+
+  .news { list-style: none; padding: 0; margin: 0; }
+  .news li { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+  .news time { color: var(--muted); font-size: .88rem; font-variant-numeric: tabular-nums; }
+
+  .summary { color: var(--muted); font-size: .92rem; margin: -6px 0 6px; }
+  .year { font: 600 .82rem Inter, sans-serif; letter-spacing: .08em; color: var(--muted); margin: 26px 0 10px; }
+  .pub { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .pub .title { font-weight: 600; }
+  .pub .title a { color: var(--ink); }
+  .pub .title a:hover { color: var(--accent); }
+  .pub .authors, .pub .venue { color: var(--muted); font-size: .92rem; }
+  .pub .authors b { color: var(--ink); }
+  .pub .venue em { color: var(--ink); }
+  .tag { display: inline-block; font-size: .72rem; font-weight: 600; padding: 2px 8px; border-radius: 4px;
+    background: var(--accent-soft); color: var(--accent); margin-right: 6px; vertical-align: 2px; }
+  .pub .btns { margin-top: 6px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .pub .btns a { font-size: .78rem; font-weight: 500; padding: 2px 9px; border: 1px solid var(--line); border-radius: 4px; }
+
+  footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: .85rem; }
+
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; gap: 36px; padding-top: 32px; }
+    aside { position: static; text-align: center; }
+    .photo, .initials { margin: 0 auto; }
+    .links { justify-content: center; }
+    .contact div { justify-content: center; }
+    nav ul { display: none; }
+    .wrap { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#">Jennifer Karam</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#project">Current project</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#publications">Publications</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap layout">
+
+  <!-- ===================== PROFILE (left column) ===================== -->
+  <aside>
+    <img class="photo" src="images/portrait.webp" alt="Jennifer Karam"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+    <div class="initials">JK</div>
+
+    <h1>Dr. Jennifer Karam</h1>
+    <p class="role">Postdoctoral Researcher<br>Chair of Building Physics<br>Bauhaus-Universität Weimar</p>
+
+    <ul class="links">
+      <li><a href="https://scholar.google.com/citations?user=qA4LWoEAAAAJ&amp;hl=en"><i class="ai ai-google-scholar"></i>Google Scholar</a></li>
+      <li><a href="https://www.researchgate.net/profile/Jennifer-Karam"><i class="ai ai-researchgate"></i>ResearchGate</a></li>
+      <li><a href="https://www.linkedin.com/in/jenniferkaram/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+      <!-- EDIT: add her CV by putting cv.pdf next to this file and removing the comment marks -->
+      <!-- <li><a href="cv.pdf"><i class="fa-regular fa-file-lines"></i>CV</a></li> -->
+    </ul>
+
+    <div class="contact">
+      <!-- EDIT: add her email and remove the comment marks -->
+      <!-- <div><i class="fa-regular fa-envelope"></i><span>firstname.lastname [at] uni-weimar.de</span></div> -->
+      <div><i class="fa-solid fa-building-columns"></i><span>Faculty of Civil and Environmental Engineering</span></div>
+      <div><i class="fa-solid fa-location-dot"></i><span>Weimar, Germany</span></div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about">
+      <h2>About</h2>
+      <p class="lead">I am a postdoctoral researcher at the Chair of Building Physics at Bauhaus-Universität Weimar.
+        I design ventilation systems that keep people safe from airborne contaminants and thermally comfortable
+        indoors, while using as little energy as possible.</p>
+      <p>I received my Ph.D. in Mechanical Engineering from the American University of Beirut (AUB) in 2025.
+        My dissertation developed novel ventilation systems for safety and comfort in indoor spaces, and assessed
+        outdoor thermal discomfort across the Arab region. My work combines numerical simulation, laboratory
+        experiments and human-subject studies, and spans classrooms, offices, homes and cities.</p>
+    </section>
+
+    <!-- ===================== RESEARCH INTERESTS ===================== -->
+    <section id="research">
+      <h2>Research</h2>
+      <div class="interests">
+        <div class="card"><h3>Personalized ventilation</h3><p>Delivering clean, conditioned air where occupants breathe, through desk push-pull devices, intermittent personalized jets and localized exhausts.</p></div>
+        <div class="card"><h3>Airborne infection control</h3><p>Limiting cross-contamination in classrooms and offices with air cleaners, upper-room UVGI and active physical barriers.</p></div>
+        <div class="card"><h3>Thermal comfort &amp; energy</h3><p>Comfort in naturally ventilated and retrofitted buildings, and passive cooling with radiative panels and phase change materials in hot climates.</p></div>
+        <div class="card"><h3>Urban climate &amp; air quality</h3><p>Historical outdoor thermal discomfort in the Eastern Mediterranean and Middle East, and PM2.5 hotspots from diesel generators in Beirut.</p></div>
+      </div>
+    </section>
+
+    <!-- ===================== CURRENT PROJECT ===================== -->
+    <section id="project">
+      <h2>Current project</h2>
+      <div class="project">
+        <img src="images/project.webp" alt="Proposed upgraded physical barrier design, and simulations of contaminant spread at an office desk with and without the barrier">
+        <div class="body">
+          <div class="kicker">Postdoctoral fellowship · 2025–</div>
+          <h3>Can physical barriers effectively prevent infections when considering human movement?</h3>
+          <p>Traditional desk partitions offer limited protection and do not adapt to how occupants move or breathe.
+            This project develops an enhanced physical barrier with active components, such as localized exhaust fans,
+            that capture and redirect airborne contaminants. The findings will inform evidence-based guidelines for
+            indoor air safety in a post-pandemic world.</p>
+          <p class="meta">Funded by the Thuringian Programme for the Promotion of Early-Career Women Researchers and Artists ·
+            <a href="https://www.uni-weimar.de/en/university/research-and-art/academic-careers/scholarships-and-funding/stipendiengalerie-2025/postdocs/karam-jennyfer/">University profile ↗</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NEWS (newest first) ===================== -->
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li><time>2026</time><span>Two papers on the desk push-pull system published in <em>Energy and Buildings</em> and <em>Indoor Environments</em>.</span></li>
+        <li><time>2026</time><span>Study of historical outdoor thermal discomfort in the Eastern Mediterranean and Middle East published in the <em>International Journal of Climatology</em>.</span></li>
+        <li><time>2025</time><span>Awarded a Thuringian postdoctoral fellowship for early-career women researchers.</span></li>
+        <li><time>2025</time><span>Joined the Chair of Building Physics at Bauhaus-Universität Weimar as a postdoctoral researcher.</span></li>
+        <li><time>Mar 2025</time><span>Received my Ph.D. in Mechanical Engineering from the American University of Beirut.</span></li>
+      </ul>
+    </section>
+
+    <!-- ===================== PUBLICATIONS ===================== -->
+    <!-- To add a paper: copy one <div class="pub"> block and edit it. -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <p class="summary">13 journal articles · 1 conference paper · 2 theses. Full list on
+        <a href="https://scholar.google.com/citations?user=qA4LWoEAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+
+      <div class="year">2026</div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.1016/j.enbuild.2026.117942">Human response to the thermal environment under a localized desk push-pull system</a></div>
+        <div class="authors"><b>J. Karam</b>, I.J. Al-Rikabi, H. Alsaad, C. Voelker</div>
+        <div class="venue"><em>Energy and Buildings</em>, 369, 117942, 2026</div>
+        <div class="btns"><a href="https://doi.org/10.1016/j.enbuild.2026.117942">DOI</a></div>
+      </div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.1016/j.indenv.2026.100196">An innovative desk push-pull device for reducing airborne contaminant exposure in office environments</a></div>
+        <div class="authors">I.J. Al-Rikabi, <b>J. Karam</b>, C. Voelker, N. Ghaddar, H. Alsaad</div>
+        <div class="venue"><em>Indoor Environments</em>, 3, 100196, 2026</div>
+        <div class="btns"><a href="https://doi.org/10.1016/j.indenv.2026.100196">DOI</a></div>
+      </div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.1002/joc.70313">Evaluating historical outdoor thermal discomfort in the Eastern Mediterranean and the Middle East</a></div>
+        <div class="authors"><b>J. Karam</b>, N. Karaoghlanian, O. Hakla, L. Youssef, J. Bhamdouni, H.P. Dasari, I. Hoteit, I. Lakkis</div>
+        <div class="venue"><em>International Journal of Climatology</em>, 46(6), e70313, 2026</div>
+        <div class="btns"><a href="https://doi.org/10.1002/joc.70313">DOI</a></div>
+      </div>
+
+      <div class="year">2025</div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.1016/j.apr.2025.102686">Modeling PM2.5 dispersion from diesel generators in Beirut: Identifying urban hotspots under data scarcity</a></div>
+        <div class="authors">E. Al Aawar, <b>J. Karam</b>, A. Baayoun, M. Ghadban, S. Najem, N.A. Saliba, I. Lakkis</div>
+        <div class="venue"><em>Atmospheric Pollution Research</em>, 16, 102686, 2025</div>
+        <div class="btns"><a href="https://doi.org/10.1016/j.apr.2025.102686">DOI</a></div>
+      </div>
+      <div class="pub">
+        <div class="title"><span class="tag">Ph.D. thesis</span>Addressing thermal comfort indoors and outdoors: Novel ventilation systems for safety and comfort in indoor spaces and mitigating outdoor thermal discomfort in the Arab region</div>
+        <div class="authors"><b>J. Karam</b></div>
+        <div class="venue">Ph.D. dissertation, <em>American University of Beirut</em>, 2025</div>
+      </div>
+
+      <div class="year">2024</div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.1016/j.enconman.2024.118859">Thermal comfort in naturally ventilated office spaces equipped with intermittent personalized ventilation</a></div>
+        <div class="authors">I.J. Al-Rikabi, <b>J. Karam</b>, H. Alsaad, N. Ghaddar, C. Voelker</div>
+        <div class="venue"><em>Energy Conversion and Management</em>, 318, 118859, 2024</div>
+        <div class="btns"><a href="https://doi.org/10.1016/j.enconman.2024.118859">DOI</a></div>
+      </div>
+      <div class="pub">
+        <div class="title"><span class="tag">Review</span><a href="https://doi.org/10.1016/j.jobe.2024.108715">The impact of mechanical and natural ventilation modes on the spread of indoor airborne contaminants: A review</a></div>
+        <div class="authors">I.J. Al-Rikabi, <b>J. Karam</b>, H. Alsaad, K. Ghali, N. Ghaddar, C. Voelker</div>
+        <div class="venue"><em>Journal of Building Engineering</em>, 85, 108715, 2024</div>
+        <div class="btns"><a href="https://doi.org/10.1016/j.jobe.2024.108715">DOI</a></div>
+      </div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.3390/buildings14030654">Resilience of personalized ventilation in maintaining acceptable breathable air quality when combined with mixing ventilation subject to external shocks</a></div>
+        <div class="authors"><b>J. Karam</b>, K. Ghali, N. Ghaddar</div>
+        <div class="venue"><em>Buildings</em>, 14(3), 654, 2024</div>
+        <div class="btns"><a href="https://doi.org/10.3390/buildings14030654">DOI</a></div>
+      </div>
+
+      <div class="year">2023</div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.1016/j.enbuild.2023.113371">Optimizing the use of natural ventilation while reducing energy cost: Case study for retrofitting an old residential apartment in a Mediterranean city</a></div>
+        <div class="authors">A. Yeretzian, <b>J. Karam</b></div>
+        <div class="venue"><em>Energy and Buildings</em>, 296, 113371, 2023</div>
+        <div class="btns"><a href="https://doi.org/10.1016/j.enbuild.2023.113371">DOI</a></div>
+      </div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.1016/j.enconman.2023.117290">Personalized ventilation with embedded air treatment system for simultaneous cooling and sorption-based carbon and humidity capture</a></div>
+        <div class="authors">J.P. Harrouz, <b>J. Karam</b>, K. Ghali, N. Ghaddar</div>
+        <div class="venue"><em>Energy Conversion and Management</em>, 291, 117290, 2023</div>
+        <div class="btns"><a href="https://doi.org/10.1016/j.enconman.2023.117290">DOI</a></div>
+      </div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.1016/j.buildenv.2022.109946">Pulsating jet ventilation add-ons performance for reducing the contaminant spread in classrooms: Portable air cleaners vs. upper room UVGI</a></div>
+        <div class="authors"><b>J. Karam</b>, K. Ghali, N. Ghaddar</div>
+        <div class="venue"><em>Building and Environment</em>, 229, 109946, 2023</div>
+        <div class="btns"><a href="https://doi.org/10.1016/j.buildenv.2022.109946">DOI</a></div>
+      </div>
+
+      <div class="year">2022</div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.1016/j.jobe.2022.105066">Downward piston ventilation assisted with a localized-chair exhaust for mitigation of pathogen transport in educational spaces</a></div>
+        <div class="authors"><b>J. Karam</b>, E. Katramiz, K. Ghali, N. Ghaddar</div>
+        <div class="venue"><em>Journal of Building Engineering</em>, 58, 105066, 2022</div>
+        <div class="btns"><a href="https://doi.org/10.1016/j.jobe.2022.105066">DOI</a></div>
+      </div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.1016/j.buildenv.2022.109220">Effective mitigation of cross-contamination in classroom conditioned by intermittent air jet cooling with use of portable air cleaners</a></div>
+        <div class="authors"><b>J. Karam</b>, E. Katramiz, K. Ghali, N. Ghaddar</div>
+        <div class="venue"><em>Building and Environment</em>, 219, 109220, 2022</div>
+        <div class="btns"><a href="https://doi.org/10.1016/j.buildenv.2022.109220">DOI</a></div>
+      </div>
+      <div class="pub">
+        <div class="title"><span class="tag">Journal</span><a href="https://doi.org/10.1080/23744731.2022.2045134">Ventilation increase using radiative cooling and phase change material at no additional energy cost in high ambient temperature countries</a></div>
+        <div class="authors">W. Chakroun, S. Alotaibi, <b>J. Karam</b>, E. Katramiz, K. Ghali, N. Ghaddar</div>
+        <div class="venue"><em>Science and Technology for the Built Environment</em>, 28(7), 807–822, 2022</div>
+        <div class="btns"><a href="https://doi.org/10.1080/23744731.2022.2045134">DOI</a></div>
+      </div>
+      <div class="pub">
+        <div class="title"><span class="tag">Conference</span>Numerical study of the efficiency of intermittent air supply system in providing thermal comfort in a classroom with low energy cost</div>
+        <div class="authors"><b>J. Karam</b></div>
+        <div class="venue"><em>ASHRAE Topical Conference Proceedings</em>, 155–164, 2022</div>
+      </div>
+
+      <div class="year">2021</div>
+      <!-- EDIT: confirm this is her master's thesis (Google Scholar lists no venue) -->
+      <div class="pub">
+        <div class="title"><span class="tag">Master's thesis</span>Ventilation benefits when using radiative cooling combined with phase change materials (PCM) storage in hot climates</div>
+        <div class="authors"><b>J. Karam</b></div>
+        <div class="venue">Master's thesis, <em>American University of Beirut</em>, 2021</div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">© 2026 Jennifer Karam · Last updated October 2026</div>
+</footer>
+
+</body>
+</html>
